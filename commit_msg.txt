@@ -1,10 +1,8 @@
-Implement credential ZK smart contract and generate compiler bindings
+Implement academic credential attestation Express server
 
-- Created the core zero-knowledge smart contract in contract/src/credential.compact with three ZK circuits:
-  * issueCredential: for universities to publish secure cryptographic grade commitments on-chain.
-  * proveEligible: for students to locally generate proofs that their CGPA meets the opportunity threshold.
-  * checkEligibility: for employers to verify eligibility results as a binary PASS/FAIL status without seeing raw grades.
-- Wrapped key ledger lookups and insertions with disclose() annotations to satisfy Compact compiler witness disclosure checks.
-- Configured package dependencies, tsconfig, and a workspace build script inside the contract directory.
-- Compiled the contract and successfully generated TypeScript bindings, intermediate representations (ZKIR), and proving/verifying keys.
-- Added a root .gitignore file to exclude node_modules, build directories (dist/), system logs, and local environment state files.
+- Created Express API workspace at api/ to handle off-chain credentials attestation.
+- Developed api/src/server.ts with a POST /api/credential/sign endpoint that generates deterministic SHA-256 HMAC signatures (commitments) of student IDs and grades.
+- Created api/src/index.ts to load environment configurations via dotenv before booting the server.
+- Added api/.env.example to define key environment variables (ISSUER_PRIVATE_KEY and PORT) and created a default local .env file.
+- Established Typescript compiler settings in api/tsconfig.json and workspace configuration in api/package.json.
+- Verified TypeScript compilation builds the server without warnings or errors.

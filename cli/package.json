@@ -1,0 +1,16 @@
+{
+  "name": "@cygnus/cli",
+  "version": "1.0.0",
+  "scripts": {
+    "local": "ts-node src/deploy.ts",
+    "preprod": "npm run local -- --network preprod"
+  },
+  "dependencies": {
+    "@midnight-ntwrk/midnight-js-protocol": "4.1.1",
+    "@midnight-ntwrk/wallet-sdk": "1.2.0"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.0",
+    "typescript": "^5.0.0"
+  }
+}

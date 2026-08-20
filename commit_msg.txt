@@ -1,11 +1,4 @@
-Implement high-fidelity React frontend DApp
+Correct module import path extension in main.tsx
 
-- Created the frontend workspace at frontend/ configuring Vite, React 18, and TS compiler settings.
-- Built context/MidnightContext.tsx using the Midnight DApp Connector API to interface with the Midnight Lace wallet.
-- Developed role-based view panels:
-  * IssuerPanel: Allows universities to sign credentials with the attestation API and post ZK commitments.
-  * StudentWallet: Enables students to input private grades, generate ZK proofs locally using the proof server, and publish status to the ledger.
-  * VerifierPanel: Permits verifiers to read on-chain results (PASS/FAIL) with full grade privacy.
-- Designed a custom glassmorphism dark-theme style sheet (src/styles.css) with radial lighting, pulsing indicator glow animations, and responsive flex grids.
-- Set up primary entrypoints in index.html, main.tsx, and App.tsx to wire up contextual layout routes.
-- Ran npm workspace install and verified that Vite bundles the production code cleanly.
+- Changed the import of App inside frontend/src/main.tsx from './App.tsx' to './App'.
+- This resolves VS Code module resolution warning outlines under the file path while keeping build outputs compatible with Vite.

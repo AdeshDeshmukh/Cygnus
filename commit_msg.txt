@@ -1,7 +1,6 @@
-Implement smart contract deployment CLI workspace configurations
+Scaffold deployment module template and configure DNS mapping
 
-- Created the CLI package workspace at cli/ to hold deployment tools and configurations.
-- Added cli/package.json to manage Midnight SDK protocols and TS compilers.
-- Created cli/tsconfig.json specifying output build formats and resolution settings.
-- Wrote cli/src/deploy.ts setting up public PreProd network configs, GraphQL indexer addresses, and local ZK proof server host variables.
-- Verified TypeScript compilation of the deployer scripts runs successfully.
+- Scaffolded the preprod-deploy/ sub-project using create-mn-app with the hello-world template.
+- Resolved local Docker networking issues inside preprod-deploy/docker-compose.yml by mapping public DNS servers (8.8.8.8 and 8.8.4.4) to the proof-server container.
+- Cleaned up the nested .git repository inside the scaffolded workspace to track it as a standard workspace folder.
+- Generated the deployment wallet address and initialized the ledger sync process on the PreProd test network.

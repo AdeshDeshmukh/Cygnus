@@ -1,6 +1,6 @@
-Scaffold deployment module template and configure DNS mapping
+Deploy contract to Midnight PreProd testnet and configure env variables
 
-- Scaffolded the preprod-deploy/ sub-project using create-mn-app with the hello-world template.
-- Resolved local Docker networking issues inside preprod-deploy/docker-compose.yml by mapping public DNS servers (8.8.8.8 and 8.8.4.4) to the proof-server container.
-- Cleaned up the nested .git repository inside the scaffolded workspace to track it as a standard workspace folder.
-- Generated the deployment wallet address and initialized the ledger sync process on the PreProd test network.
+- Successfully completed the testnet wallet synchronization and faucet funding detection.
+- Deployed the Cygnus smart contract on the public PreProd network at address 53fe8fbc9c9cf5477266d6bf60e8be66525016d55a5e69bddf2a5bf2c3d6b3e1.
+- Saved the deployed contract address to the root .env configuration.
+- Updated the root .gitignore to exclude indexer LevelDB caches.

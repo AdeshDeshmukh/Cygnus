@@ -1,17 +1,17 @@
 :root {
-  --bg: #07070b;
-  --surface: rgba(15, 15, 27, 0.65);
-  --card: rgba(22, 22, 41, 0.45);
-  --accent: #6c63ff;
-  --accent-glow: rgba(108, 99, 255, 0.35);
-  --accent-light: #9d98ff;
-  --success: #00e676;
-  --success-glow: rgba(0, 230, 118, 0.2);
-  --danger: #ff5252;
-  --danger-glow: rgba(255, 82, 82, 0.2);
-  --text: #f0f0f5;
-  --muted: #8c8ca8;
-  --border: rgba(255, 255, 255, 0.08);
+  --bg: #fdfbf7;
+  --surface: rgba(255, 255, 255, 0.75);
+  --card: rgba(255, 255, 255, 0.9);
+  --accent: #5c4eff;
+  --accent-glow: rgba(92, 78, 255, 0.15);
+  --accent-light: #7e73ff;
+  --success: #00b0ff;
+  --success-glow: rgba(0, 176, 255, 0.1);
+  --danger: #d50000;
+  --danger-glow: rgba(213, 0, 0, 0.1);
+  --text: #2c2a29;
+  --muted: #73706d;
+  --border: rgba(0, 0, 0, 0.08);
   --radius: 16px;
   --blur: 12px;
 }
@@ -23,7 +23,7 @@
 }
 
 body {
-  background: radial-gradient(circle at 50% 0%, #1c1c38 0%, #07070b 80%);
+  background: radial-gradient(circle at 50% 0%, #f7f1e3 0%, #fdfbf7 80%);
   color: var(--text);
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   min-height: 100vh;
@@ -41,7 +41,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 2.5rem;
-  background: rgba(10, 10, 18, 0.5);
+  background: rgba(253, 251, 247, 0.6);
   backdrop-filter: blur(var(--blur));
   -webkit-backdrop-filter: blur(var(--blur));
   border-bottom: 1px solid var(--border);
@@ -63,7 +63,7 @@ header {
   font-size: 1.8rem;
   font-weight: 800;
   letter-spacing: -0.5px;
-  background: linear-gradient(135deg, #fff 0%, var(--accent-light) 100%);
+  background: linear-gradient(135deg, #1c1a18 0%, var(--accent) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -83,8 +83,8 @@ header {
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  background: rgba(0, 230, 118, 0.08);
-  border: 1px solid rgba(0, 230, 118, 0.25);
+  background: rgba(0, 176, 255, 0.05);
+  border: 1px solid rgba(0, 176, 255, 0.25);
   border-radius: 30px;
   padding: 0.5rem 1rem;
   color: var(--success);
@@ -102,7 +102,7 @@ header {
 }
 
 .btn-connect {
-  background: linear-gradient(135deg, var(--accent) 0%, #4c3cff 100%);
+  background: linear-gradient(135deg, var(--accent) 0%, #3d2fff) 100%;
   color: white;
   border: none;
   border-radius: 30px;
@@ -116,20 +116,20 @@ header {
 
 .btn-connect:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(108, 99, 255, 0.5);
+  box-shadow: 0 6px 20px rgba(92, 78, 255, 0.35);
 }
 
 .role-nav {
   display: flex;
   gap: 0.8rem;
   padding: 1.2rem 2.5rem;
-  background: rgba(10, 10, 18, 0.2);
+  background: rgba(253, 251, 247, 0.3);
   border-bottom: 1px solid var(--border);
   backdrop-filter: blur(var(--blur));
 }
 
 .role-nav button {
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(0, 0, 0, 0.02);
   color: var(--muted);
   border: 1px solid var(--border);
   border-radius: 30px;
@@ -169,13 +169,13 @@ main {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
 }
 
 .panel h2 {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #fff;
+  color: var(--text);
   letter-spacing: -0.3px;
 }
 
@@ -196,7 +196,7 @@ label {
 }
 
 input, select {
-  background: rgba(255, 255, 255, 0.04);
+  background: #ffffff;
   border: 1px solid var(--border);
   border-radius: 10px;
   color: var(--text);
@@ -209,8 +209,8 @@ input, select {
 input:focus, select:focus {
   outline: none;
   border-color: var(--accent-light);
-  background: rgba(255, 255, 255, 0.08);
-  box-shadow: 0 0 10px rgba(108, 99, 255, 0.2);
+  background: #ffffff;
+  box-shadow: 0 0 10px rgba(92, 78, 255, 0.15);
 }
 
 .btn-primary {

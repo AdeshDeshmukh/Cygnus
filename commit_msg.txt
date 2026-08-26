@@ -1,4 +1,5 @@
-Add hackathon documentation and presentation scripts
+Refine light cream theme design and add simulator fallback
 
-- Created the root README.md containing project summaries, zero-knowledge architecture descriptions, setup/installation instructions, and your active PreProd contract address.
-- Created the root DEMO.md with a detailed narrational timeline script mapping the step-by-step role panel walkthroughs (University -> Student -> Recruiter) for the video recording.
+- Redesigned styles.css to apply a clean, light cream layout with soft shadows and slate-charcoal typography.
+- Standardized form elements, borders, and result status badges to match the warm-themed colors.
+- Modified the wallet connector code inside MidnightContext.tsx to support a seamless Simulator Mode fallback when the Lace extension API is absent or blocked in the browser.

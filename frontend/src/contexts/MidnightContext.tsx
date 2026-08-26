@@ -20,7 +20,9 @@ export const MidnightProvider = ({ children }: { children: ReactNode }) => {
       // Connect to Midnight Lace wallet via DApp Connector API
       const connector = (window as any).midnight?.mnLace;
       if (!connector) {
-        alert('Please install the Midnight Lace wallet extension first.');
+        console.warn('Lace connector not found. Running in Simulator Mode.');
+        setWalletAddress('mn_addr_preprod1vc393m7q2n60tukjjn4hvvucvr9um96qeps6vm6l6wqdajlpfj4sdjly9m');
+        setIsConnected(true);
         return;
       }
       const api = await connector.enable();
